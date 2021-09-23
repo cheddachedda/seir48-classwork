@@ -48,30 +48,13 @@ for (let i = 0; i < recipe.ingredients.length; i++) {
 // - Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
 
 const books = [
-  {
-    title: 'Sapiens',
-    author: 'Yuval Noah Harari',
-    alreadyRead: true,
-  },
-  {
-    title: 'Outliers',
-    author: 'Malcolm Gladwell',
-    alreadyRead: true,
-  },
-  {
-    title: 'Dare To Lead',
-    author: 'Brené Brown',
-    alreadyRead: false,
-  },
-  {
-    title: 'Pedagogy of the Oppressed',
-    author: 'Paulo Freire',
-    alreadyRead: false,
-  },
+  { title: 'Sapiens', author: 'Yuval Noah Harari', alreadyRead: true },
+  { title: 'Outliers', author: 'Malcolm Gladwell', alreadyRead: true },
+  { title: 'Dare To Lead', author: 'Brené Brown', alreadyRead: false },
+  { title: 'Pedagogy of the Oppressed', author: 'Paulo Freire', alreadyRead: false },
 ];
 
 for (let i = 0; i < books.length; i++) {
-  let output = '';
   if (books[i].alreadyRead) {
     console.log(`You already read ${books[i].title} by ${books[i].author}`);
   } else {
