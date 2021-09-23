@@ -55,10 +55,11 @@ const books = [
 ];
 
 for (let i = 0; i < books.length; i++) {
+  const bookInfo = `"${books[i].title}" by ${books[i].author}`;
   if (books[i].alreadyRead) {
-    console.log(`You already read "${books[i].title}" by ${books[i].author}`);
+    console.log(`You already read ${bookInfo}`);
   } else {
-    console.log(`You still need to read "${books[i].title}" by ${books[i].author}`);
+    console.log(`You still need to read ${bookInfo}`);
   }
 }
 
@@ -82,17 +83,8 @@ const faveMovie = {
   ],
 };
 
-const logMovie = function(movie) {
-  let output = `${movie.title} lasts for ${movie.duration}. Stars: `
-  for (let i = 0; i < movie.stars.length; i++) {
-    output += movie.stars[i]
-    if (i !== movie.stars.length - 1) {
-      output += ', ';
-    } else {
-      output += '.'
-    }
-  }
-  console.log(output);
+const logMovie = function({ title, duration, stars }) {
+  console.log(`${title} lasts for ${duration}. Stars: ${stars.join(', ')}.`);
 }
 
 logMovie(faveMovie);
