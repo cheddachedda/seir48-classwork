@@ -4,9 +4,9 @@
 // E.g. if your input = "Pig Latin is cool !", your output should look like => "igPay atinLay siay oolcay !"
 
 const pigLatin = function (input) {
-  const latiniseWord = (word) => word.slice(1) + word[0] + 'ay';
+  const pigIt = (word) => word.slice(1) + word[0] + 'ay';
   return input.split(' ')
-              .map((word) => hasLetters(word) ? latiniseWord(word) : word)
+              .map((word) => hasLetters(word) ? pigIt(word) : word)
               .join(' ');
 }
 
