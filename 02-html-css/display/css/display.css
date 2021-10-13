@@ -1,0 +1,49 @@
+body {
+  background-color: coral;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  line-height: 300px; /* nasty way to centre vertically */
+}
+
+.block-demo {
+  display: block;
+}
+
+.inline-demo {
+  display: inline;
+}
+
+.inline-block-demo {
+  display: inline-block;  /* This is exactly why you don't need float anymore */
+}
+
+.none-demo {
+  display: none;
+}
+
+.hidden-demo {
+  visibility: hidden;
+}
+
+/* Halloween */
+
+.spooky span {
+  visibility: hidden;
+}
+
+/* CSS pseudoselector */
+.spooky:hover {
+  background-color: black;
+}
+
+.spooky:hover span {
+  transition: 2s all;
+  visibility: visible;
+  color: white;
+}
