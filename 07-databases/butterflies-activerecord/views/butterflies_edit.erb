@@ -1,19 +1,19 @@
 <h1>Edit Butterfly</h1>
 
-<form action="/butterflies/<%= @butterfly["id"] %>" method="post">
+<form action="/butterflies/<%= @butterfly.id %>" method="post">
   <label>
     Name:
-    <input name="name" placeholder="e.g. Red Admiral" required value="<%= @butterfly["name"] %>">
+    <input name="name" placeholder="e.g. Red Admiral" required value="<%= @butterfly.name %>">
   </label>
 
   <label>
     Family:
-    <input name="family" placeholder="e.g. Nymphalidae" value="<%= @butterfly["family"] %>">
+    <input name="family" placeholder="e.g. Nymphalidae" value="<%= @butterfly.family %>">
   </label>
 
   <label>
     Image:
-    <input type="url" name="image" placeholder="http://..." value="<%= @butterfly["image"] %>">
+    <input type="url" name="image" placeholder="http://..." value="<%= @butterfly.image %>">
   </label>
 
   <button>Update butterfly</button>
