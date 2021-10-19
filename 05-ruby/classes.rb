@@ -1,51 +1,44 @@
-# Festival
+require 'pry'
 
-# groucho = {
-#   :name => 'Groucho',
-#   :instrument => 'guitar',
-#   :vice => 'cigars'
-# }
-#
-# harpo = {
-#   :name => 'Harpo',
-#   :instrument => 'harp',
-#   :vice => 'mutism'
-# }
-#
-# def play(brother)
-#   "My name is #{ brother[:name] } and I play the #{ brother[:instrument] }"
-# end
+# An object is kind of like a hash -- it has key/value pairs.
+# BUT you have to predefine the keys.
+# A strict hash: you have to predeine the shape.
+# Also, unlike a Ruby hash: an object can have methods (functions inside the object)
 
-class MarxBrother
+class Actor
+  def award_speech
+    "I would like to thank my agents and my partner. We did it, baby!"
+  end
+
+  def deny_allegations
+    "I deny that and I don't remember and I was drunk and he's not my type" # Kevin Spacey defense
+  end
+end
+
+class Stooge < Actor
+  def terrible?
+    true
+  end
+end
+
+# name, instrument, vice
+class MarxBrother < Actor
+  attr_accessor :name, :instrument, :vice # macro will write getters and setters for you
+
+  def initialize(n='', i='', v='lampooning authority') # variadic – default parameters
+    @name = n
+    @instrument = i
+    @vice = v
+  end
+
+  # custom gettersdef play
+  def play
+    "My name is #{ @name } and I play the #{ @instrument }"
+  end
 end
 
 groucho = MarxBrother.new
-groucho.play() # play(groucho)
+chico = MarxBrother.new 'Chico Marx'
+harpo = MarxBrother.new 'Harpo Marx', 'harp', 'mutism'
 
-# .erb <%= play(groucho) %>
-# .erb <%= play(harpo) %>
-
-# Festival – Shakespeare Retrospective #########################################
-
-# tempest = {
-#   :title => 'The Tempest',
-#   :year => 1650
-# }
-#
-# taming = {
-#   :title => 'The Taming of the Shrew',
-#   :year => 1630
-# }
-#
-# def play(p)
-#   "#{ p[:title]} is believed to have been written in #{ p[:year] }"
-# end
-
-class ShakespearePlay
-end
-
-tempest = ShakespearePlay.new
-tempest.play() # play(tempest)
-
-require 'pry'
 binding.pry
