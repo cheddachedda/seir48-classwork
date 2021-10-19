@@ -1,7 +1,6 @@
 require "sinatra"
 require "sinatra/reloader"
 require "sqlite3"
-require "pry"
 require 'active_record'
 
 # Next week: Rails will do this for you automatically
@@ -15,10 +14,18 @@ ActiveRecord::Base.logger = Logger.new(STDERR)
 
 # Model: class backed by a database table
 class Butterfly < ActiveRecord::Base
+  belongs_to :plant, :optional => true
 end
 
 class Plant < ActiveRecord::Base
+  has_many :butterflies
 end
+
+# Sneaky route that lets us start pry from the browser (when needed)
+# get '/pry' do
+#   require "pry"
+#   binding.pry
+# end
 
 get '/' do
   erb :home
@@ -41,6 +48,7 @@ post '/butterflies' do
   butterfly.name = params[:name]
   butterfly.family = params[:family]
   butterfly.image = params[:image]
+  butterfly.plant_id = params[:plant_id] # associating!
 
   butterfly.save
 
@@ -65,6 +73,7 @@ post '/butterflies/:id' do
   butterfly.name = params[:name]
   butterfly.family = params[:family]
   butterfly.image = params[:image]
+  butterfly.plant_id = params[:plant_id]
 
   butterfly.save
 
