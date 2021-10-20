@@ -1777,3 +1777,299 @@ Processing by WorksController#new as HTML
 Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 15:10:06 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (31.5ms)
+  Rendered works/new.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 398ms (Views: 163.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 15:19:14 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (77.9ms)
+  Rendered works/new.html.erb within layouts/application (81.7ms)
+Completed 200 OK in 296ms (Views: 122.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:19:18 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 15:19:19 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2021-10-20 15:19:20 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 102ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 15:19:48 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 109ms (Views: 105.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2021-10-20 15:19:50 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 15:20:17 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 277ms (Views: 44.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2021-10-20 15:20:20 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:20
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2021-10-20 15:20:44 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:20
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (6.8ms)
+  Rendered works/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 15:22:51 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2021-10-20 15:22:53 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:20
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (3.9ms)
+  Rendered works/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:23:15 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 61ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:23:21 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/7" for 127.0.0.1 at 2021-10-20 15:23:22 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:23:24 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2021-10-20 15:23:29 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 44ms (Views: 35.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:23:31 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 15:24:29 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 16.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 15:24:31 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (2.5ms)
+  Rendered works/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 15:24:59 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (5.7ms)
+  Rendered works/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 15:25:06 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (4.7ms)
+  Rendered works/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 35ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2021-10-20 15:25:07 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (4.7ms)
+  Rendered artists/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 57ms (Views: 30.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 15:25:09 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (4.8ms)
+  Rendered works/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2021-10-20 15:26:18 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qdZyNbkj+kPxSKNQ+76O95RdUJO3L60kuD9Er5VFd19294b3PU5ACbUxOEkQspcMtel7zVP6+dy/FZ6+oub+Rg==", "work"=>{"title"=>"c sharp minor quartet", "year"=>"1929", "medium"=>"", "style"=>"Etchings", "image"=>"https://www.deutscherandhackett.com/sites/default/files/styles/width_2000/public/lot/image/140265.jpg?itok=h8VzHWNT"}, "commit"=>"Create Work"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/works_controller.rb:11
+  [1m[36mWork Create (0.7ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "c sharp minor quartet"], ["year", "1929"], ["medium", ""], ["style", "Etchings"], ["image", "https://www.deutscherandhackett.com/sites/default/files/styles/width_2000/public/lot/image/140265.jpg?itok=h8VzHWNT"], ["created_at", "2021-10-20 04:26:18.564669"], ["updated_at", "2021-10-20 04:26:18.564669"]]
+  ↳ app/controllers/works_controller.rb:11
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/works_controller.rb:11
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 2.3ms)
+
+
+  
+NameError (undefined local variable or method `wpork' for #<WorksController:0x00007fb617cc9118>
+Did you mean?  work):
+  
+app/controllers/works_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2021-10-20 15:26:34 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (8.9ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:26:37 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 79ms (Views: 63.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/works/8" for 127.0.0.1 at 2021-10-20 15:26:39 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/8" for 127.0.0.1 at 2021-10-20 15:28:06 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:16
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 90ms (Views: 68.5ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/works/8" for 127.0.0.1 at 2021-10-20 15:28:10 +1100
+Processing by WorksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I+DC33jvvt/hlIxcRYKdFQ703H4LdeCNzNdWZN+VuRKW0DqMEIqzlGyVoLnvBZHieZ5eVehVZz7/Mlg2dAdoLg==", "id"=>"8"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/works_controller.rb:30
+  [1m[36mWork Destroy (0.7ms)[0m  [1m[31mDELETE FROM "works" WHERE "works"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/works_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/works_controller.rb:30
+Redirected to http://localhost:3000/works
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:28:10 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.3ms)
+
+

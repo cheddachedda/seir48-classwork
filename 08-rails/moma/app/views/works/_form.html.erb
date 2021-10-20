@@ -2,6 +2,9 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
   <%= f.label :medium %>
   <%= f.text_field :medium %>
 
@@ -9,7 +12,7 @@
   <%= f.text_field :style %>
 
   <%= f.label :image %>
-  <%= f.url_field :image, :required => true %>
+  <%= f.url_field :image %>
 
   <%= f.submit %>
 <% end %>
