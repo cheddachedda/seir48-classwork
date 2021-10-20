@@ -16,6 +16,12 @@ class ArtistsController < ApplicationController
     @artist = Artist.find params[:id]
   end
 
+  def destroy
+    artist = Artist.find params[:id]
+    artist.destroy
+    redirect_to artists_path
+  end
+
   private # this makes ALL the following methods private (so only use it at the end)
   def artist_params # strong params (see docs)
     params.require(:artist).permit(:name, :nationality, :dob, :period, :image)

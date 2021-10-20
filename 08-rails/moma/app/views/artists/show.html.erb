@@ -7,3 +7,7 @@
   <li>Date of birth: <%= @artist.dob.strftime '%A, %B %e, %Y' if @artist.dob.present? %></li>
   <li>Period: <%= @artist.period %></li>
 </ul>
+
+<div class="controls">
+  <%= button_to 'Delete artist', @artist, :method => 'delete' %>
+</div>
