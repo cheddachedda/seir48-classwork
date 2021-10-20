@@ -1560,3 +1560,55 @@ Processing by Rails::InfoController#routes as HTML
 Completed 200 OK in 77ms (Views: 61.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/artists" for 127.0.0.1 at 2021-10-20 14:50:17 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 1751ms (Views: 1746.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 14:50:22 +1100
+  
+SyntaxError (/Users/danielnguyen/Projects/seir48-classwork/08-rails/moma/app/controllers/works_controller.rb:1: syntax error, unexpected '<', expecting ';' or '\n'
+def WorksController < ApplicationController
+                    ^
+/Users/danielnguyen/Projects/seir48-classwork/08-rails/moma/app/controllers/works_controller.rb:5: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/works_controller.rb:1: syntax error, unexpected '<', expecting ';' or '\n'
+app/controllers/works_controller.rb:5: syntax error, unexpected `end', expecting end-of-input
+Started GET "/works" for 127.0.0.1 at 2021-10-20 14:51:05 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 48ms (Views: 34.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 14:51:39 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 14:51:40 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works/2" for 127.0.0.1 at 2021-10-20 14:51:43 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
