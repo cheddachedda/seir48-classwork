@@ -1612,3 +1612,64 @@ Processing by WorksController#show as HTML
 Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/works" for 127.0.0.1 at 2021-10-20 14:59:05 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (310.1ms)
+Completed 200 OK in 357ms (Views: 344.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/works/4" for 127.0.0.1 at 2021-10-20 14:59:07 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 61ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2021-10-20 15:01:27 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:3
+  Rendered works/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 15:01:28 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h1><%= @work.title %></h1>
+    2: 
+    3: <%= image_tag @work.image, :class => 'feature' %>
+    4: 
+  
+app/views/works/show.html.erb:1:in `_app_views_works_show_html_erb__33875823628099001_22560'
+Started GET "/works/1" for 127.0.0.1 at 2021-10-20 15:01:48 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:7
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 140ms (Views: 97.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2021-10-20 15:01:59 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 1.2ms)
+
+
