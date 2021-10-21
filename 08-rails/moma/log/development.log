@@ -2877,3 +2877,23 @@ Processing by WorksController#edit as HTML
 Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 16:25:50 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  ↳ app/views/works/_form.html.erb:18
+  Rendered works/_form.html.erb (6.0ms)
+  Rendered works/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2021-10-20 16:27:07 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  ↳ app/views/works/_form.html.erb:18
+  Rendered works/_form.html.erb (7.1ms)
+  Rendered works/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 110ms (Views: 108.3ms | ActiveRecord: 0.2ms)
+
+
