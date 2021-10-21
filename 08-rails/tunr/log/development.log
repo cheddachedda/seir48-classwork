@@ -48,3 +48,478 @@ Migrating to CreateUsers (20211021000915)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGenresSongs (20211021000934)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "genres_songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211021000934"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMixtapesSongs (20211021000939)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "mixtapes_songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211021000939"]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "jonesy@ga.co"], ["created_at", "2021-10-21 00:51:04.837644"], ["updated_at", "2021-10-21 00:51:04.837644"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "craigsy@ga.co"], ["created_at", "2021-10-21 00:51:04.855007"], ["updated_at", "2021-10-21 00:51:04.855007"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (1.9ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Toxic"], ["created_at", "2021-10-21 00:51:05.029575"], ["updated_at", "2021-10-21 00:51:05.029575"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (1.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Have A Safe Trip Dear"], ["created_at", "2021-10-21 00:51:05.044675"], ["updated_at", "2021-10-21 00:51:05.044675"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Don't Ask Me To Dance"], ["created_at", "2021-10-21 00:51:05.084117"], ["updated_at", "2021-10-21 00:51:05.084117"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (0.8ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "My Head Is My Only Housae Unless It Rains"], ["created_at", "2021-10-21 00:51:05.096347"], ["updated_at", "2021-10-21 00:51:05.096347"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "songs"[0m
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (9.1ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "In The Zone"], ["created_at", "2021-10-21 00:51:05.120097"], ["updated_at", "2021-10-21 00:51:05.120097"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (8.8ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Engine Takes To The Water"], ["created_at", "2021-10-21 00:51:05.171415"], ["updated_at", "2021-10-21 00:51:05.171415"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (3.3ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "The Last Romance"], ["created_at", "2021-10-21 00:51:05.193644"], ["updated_at", "2021-10-21 00:51:05.193644"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (6.4ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Clear Spot"], ["created_at", "2021-10-21 00:51:05.208187"], ["updated_at", "2021-10-21 00:51:05.208187"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "albums"[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (3.8ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Britney Spears"], ["created_at", "2021-10-21 00:51:05.246060"], ["updated_at", "2021-10-21 00:51:05.246060"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "June of 44"], ["created_at", "2021-10-21 00:51:05.264111"], ["updated_at", "2021-10-21 00:51:05.264111"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (1.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arab Strap"], ["created_at", "2021-10-21 00:51:05.273596"], ["updated_at", "2021-10-21 00:51:05.273596"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (0.8ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Captain Beefheart and the Magic Band"], ["created_at", "2021-10-21 00:51:05.282937"], ["updated_at", "2021-10-21 00:51:05.282937"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (0.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nautical Text Rock"], ["created_at", "2021-10-21 00:51:05.318589"], ["updated_at", "2021-10-21 00:51:05.318589"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (1.9ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nautical Math Rock"], ["created_at", "2021-10-21 00:51:05.328838"], ["updated_at", "2021-10-21 00:51:05.328838"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (1.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Folk"], ["created_at", "2021-10-21 00:51:05.339234"], ["updated_at", "2021-10-21 00:51:05.339234"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Scottish Misery Rock"], ["created_at", "2021-10-21 00:51:05.351572"], ["updated_at", "2021-10-21 00:51:05.351572"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (1.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bubblegum Pop"], ["created_at", "2021-10-21 00:51:05.361287"], ["updated_at", "2021-10-21 00:51:05.361287"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (1.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bollywood"], ["created_at", "2021-10-21 00:51:05.377460"], ["updated_at", "2021-10-21 00:51:05.377460"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (0.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Skronk"], ["created_at", "2021-10-21 00:51:05.390340"], ["updated_at", "2021-10-21 00:51:05.390340"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (6.5ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Driving Songs"], ["created_at", "2021-10-21 00:51:05.452597"], ["updated_at", "2021-10-21 00:51:05.452597"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (1.6ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Makeout Music"], ["created_at", "2021-10-21 00:51:05.473216"], ["updated_at", "2021-10-21 00:51:05.473216"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (0.6ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Code Jams"], ["created_at", "2021-10-21 00:51:05.485581"], ["updated_at", "2021-10-21 00:51:05.485581"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (1.0ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Monkey Mongs"], ["created_at", "2021-10-21 00:51:05.499934"], ["updated_at", "2021-10-21 00:51:05.499934"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mixtapes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.5ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 1], ["updated_at", "2021-10-21 00:51:05.724182"], ["id", 1]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (1.5ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 2], ["updated_at", "2021-10-21 00:51:05.741598"], ["id", 2]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.7ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 3], ["updated_at", "2021-10-21 00:51:05.764021"], ["id", 3]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.5ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 4], ["updated_at", "2021-10-21 00:51:05.772499"], ["id", 4]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.5ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 1], ["updated_at", "2021-10-21 00:51:05.781738"], ["id", 1]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (1.6ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 2], ["updated_at", "2021-10-21 00:51:05.792504"], ["id", 2]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (5.4ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 3], ["updated_at", "2021-10-21 00:51:05.813892"], ["id", 3]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (1.9ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 4], ["updated_at", "2021-10-21 00:51:05.828307"], ["id", 4]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (25.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "jonesy@ga.co"], ["created_at", "2021-10-21 00:53:08.077117"], ["updated_at", "2021-10-21 00:53:08.077117"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "craigsy@ga.co"], ["created_at", "2021-10-21 00:53:08.098201"], ["updated_at", "2021-10-21 00:53:08.098201"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Destroy (0.4ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."song_id" = ?[0m  [["song_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMixtapesSongs (20211021000939)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.2ms)[0m  [1m[35mDROP TABLE "mixtapes_songs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20211021000939"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGenresSongs (20211021000934)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "genres_songs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20211021000934"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGenresSongs (20211021000934)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "genres_songs" ("genre_id" integer, "song_id" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211021000934"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMixtapesSongs (20211021000939)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "mixtapes_songs" ("mixtape_id" integer, "song_id" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211021000939"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (2.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "jonesy@ga.co"], ["created_at", "2021-10-21 00:54:51.353945"], ["updated_at", "2021-10-21 00:54:51.353945"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "craigsy@ga.co"], ["created_at", "2021-10-21 00:54:51.367447"], ["updated_at", "2021-10-21 00:54:51.367447"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Destroy (0.1ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."song_id" = ?[0m  [["song_id", 1]]
+  [1m[36mSong::HABTM_Mixtapes Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."song_id" = ?[0m  [["song_id", 1]]
+  [1m[36mSong Destroy (0.5ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Destroy (2.1ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."song_id" = ?[0m  [["song_id", 2]]
+  [1m[36mSong::HABTM_Mixtapes Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."song_id" = ?[0m  [["song_id", 2]]
+  [1m[36mSong Destroy (1.2ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Destroy (1.3ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."song_id" = ?[0m  [["song_id", 3]]
+  [1m[36mSong::HABTM_Mixtapes Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."song_id" = ?[0m  [["song_id", 3]]
+  [1m[36mSong Destroy (0.5ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Destroy (0.7ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."song_id" = ?[0m  [["song_id", 4]]
+  [1m[36mSong::HABTM_Mixtapes Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."song_id" = ?[0m  [["song_id", 4]]
+  [1m[36mSong Destroy (2.0ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (5.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Toxic"], ["created_at", "2021-10-21 00:54:51.766959"], ["updated_at", "2021-10-21 00:54:51.766959"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (6.2ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Have A Safe Trip Dear"], ["created_at", "2021-10-21 00:54:51.779833"], ["updated_at", "2021-10-21 00:54:51.779833"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (8.1ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Don't Ask Me To Dance"], ["created_at", "2021-10-21 00:54:51.792483"], ["updated_at", "2021-10-21 00:54:51.792483"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Create (1.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "My Head Is My Only Housae Unless It Rains"], ["created_at", "2021-10-21 00:54:51.810638"], ["updated_at", "2021-10-21 00:54:51.810638"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "songs"[0m
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Destroy (5.4ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Destroy (4.4ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Destroy (0.6ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Destroy (0.6ms)[0m  [1m[31mDELETE FROM "albums" WHERE "albums"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (5.9ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "In The Zone"], ["created_at", "2021-10-21 00:54:51.909783"], ["updated_at", "2021-10-21 00:54:51.909783"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Engine Takes To The Water"], ["created_at", "2021-10-21 00:54:51.924643"], ["updated_at", "2021-10-21 00:54:51.924643"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (0.6ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "The Last Romance"], ["created_at", "2021-10-21 00:54:51.936176"], ["updated_at", "2021-10-21 00:54:51.936176"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAlbum Create (7.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Clear Spot"], ["created_at", "2021-10-21 00:54:51.950434"], ["updated_at", "2021-10-21 00:54:51.950434"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "albums"[0m
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Destroy (7.6ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Destroy (0.6ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Destroy (1.1ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Destroy (0.7ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (5.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Britney Spears"], ["created_at", "2021-10-21 00:54:52.259806"], ["updated_at", "2021-10-21 00:54:52.259806"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "June of 44"], ["created_at", "2021-10-21 00:54:52.272146"], ["updated_at", "2021-10-21 00:54:52.272146"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (0.7ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arab Strap"], ["created_at", "2021-10-21 00:54:52.288333"], ["updated_at", "2021-10-21 00:54:52.288333"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Create (3.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Captain Beefheart and the Magic Band"], ["created_at", "2021-10-21 00:54:52.318721"], ["updated_at", "2021-10-21 00:54:52.318721"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Destroy (0.5ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."genre_id" = ?[0m  [["genre_id", 1]]
+  [1m[36mGenre Destroy (0.6ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."genre_id" = ?[0m  [["genre_id", 2]]
+  [1m[36mGenre Destroy (4.6ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."genre_id" = ?[0m  [["genre_id", 3]]
+  [1m[36mGenre Destroy (0.5ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Destroy (10.6ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."genre_id" = ?[0m  [["genre_id", 4]]
+  [1m[36mGenre Destroy (0.4ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."genre_id" = ?[0m  [["genre_id", 5]]
+  [1m[36mGenre Destroy (5.6ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."genre_id" = ?[0m  [["genre_id", 6]]
+  [1m[36mGenre Destroy (0.6ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "genres_songs" WHERE "genres_songs"."genre_id" = ?[0m  [["genre_id", 7]]
+  [1m[36mGenre Destroy (1.4ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (13.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nautical Text Rock"], ["created_at", "2021-10-21 00:54:52.603556"], ["updated_at", "2021-10-21 00:54:52.603556"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (0.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nautical Math Rock"], ["created_at", "2021-10-21 00:54:52.640442"], ["updated_at", "2021-10-21 00:54:52.640442"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (10.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Folk"], ["created_at", "2021-10-21 00:54:52.660339"], ["updated_at", "2021-10-21 00:54:52.660339"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (34.9ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Scottish Misery Rock"], ["created_at", "2021-10-21 00:54:52.692235"], ["updated_at", "2021-10-21 00:54:52.692235"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (2.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bubblegum Pop"], ["created_at", "2021-10-21 00:54:52.743584"], ["updated_at", "2021-10-21 00:54:52.743584"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (1.0ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bollywood"], ["created_at", "2021-10-21 00:54:52.759640"], ["updated_at", "2021-10-21 00:54:52.759640"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Create (0.7ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Skronk"], ["created_at", "2021-10-21 00:54:52.777535"], ["updated_at", "2021-10-21 00:54:52.777535"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  [1m[36mMixtape Load (7.9ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = ?[0m  [["mixtape_id", 1]]
+  [1m[36mMixtape Destroy (1.0ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = ?[0m  [["mixtape_id", 2]]
+  [1m[36mMixtape Destroy (4.5ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = ?[0m  [["mixtape_id", 3]]
+  [1m[36mMixtape Destroy (1.7ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = ?[0m  [["mixtape_id", 4]]
+  [1m[36mMixtape Destroy (0.5ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (0.6ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Driving Songs"], ["created_at", "2021-10-21 00:54:53.029088"], ["updated_at", "2021-10-21 00:54:53.029088"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (0.6ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Makeout Music"], ["created_at", "2021-10-21 00:54:53.062316"], ["updated_at", "2021-10-21 00:54:53.062316"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (6.8ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Code Jams"], ["created_at", "2021-10-21 00:54:53.168905"], ["updated_at", "2021-10-21 00:54:53.168905"]]
+  [1m[36mTRANSACTION (30.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape Create (0.6ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Monkey Mongs"], ["created_at", "2021-10-21 00:54:53.223675"], ["updated_at", "2021-10-21 00:54:53.223675"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mixtapes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.6ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 5], ["updated_at", "2021-10-21 00:54:53.239089"], ["id", 5]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.5ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 6], ["updated_at", "2021-10-21 00:54:53.247598"], ["id", 6]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (6.4ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 7], ["updated_at", "2021-10-21 00:54:53.256467"], ["id", 7]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.5ms)[0m  [1m[33mUPDATE "songs" SET "album_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["album_id", 8], ["updated_at", "2021-10-21 00:54:53.271118"], ["id", 8]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (1.9ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 5], ["updated_at", "2021-10-21 00:54:53.288940"], ["id", 5]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (3.0ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 6], ["updated_at", "2021-10-21 00:54:53.304557"], ["id", 6]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.6ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 7], ["updated_at", "2021-10-21 00:54:53.321200"], ["id", 7]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong Update (0.9ms)[0m  [1m[33mUPDATE "songs" SET "artist_id" = ?, "updated_at" = ? WHERE "songs"."id" = ?[0m  [["artist_id", 8], ["updated_at", "2021-10-21 00:54:53.333812"], ["id", 8]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Create (0.5ms)[0m  [1m[32mINSERT INTO "genres_songs" ("genre_id", "song_id") VALUES (?, ?)[0m  [["genre_id", 12], ["song_id", 5]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Create (2.4ms)[0m  [1m[32mINSERT INTO "genres_songs" ("genre_id", "song_id") VALUES (?, ?)[0m  [["genre_id", 13], ["song_id", 5]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Create (0.9ms)[0m  [1m[32mINSERT INTO "genres_songs" ("genre_id", "song_id") VALUES (?, ?)[0m  [["genre_id", 8], ["song_id", 6]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Create (6.9ms)[0m  [1m[32mINSERT INTO "genres_songs" ("genre_id", "song_id") VALUES (?, ?)[0m  [["genre_id", 9], ["song_id", 6]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Create (4.6ms)[0m  [1m[32mINSERT INTO "genres_songs" ("genre_id", "song_id") VALUES (?, ?)[0m  [["genre_id", 10], ["song_id", 7]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSong::HABTM_Genres Create (1.5ms)[0m  [1m[32mINSERT INTO "genres_songs" ("genre_id", "song_id") VALUES (?, ?)[0m  [["genre_id", 11], ["song_id", 7]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre::HABTM_Songs Create (0.8ms)[0m  [1m[32mINSERT INTO "genres_songs" ("genre_id", "song_id") VALUES (?, ?)[0m  [["genre_id", 14], ["song_id", 8]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.5ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 5], ["song_id", 5]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.5ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 5], ["song_id", 6]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.5ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 5], ["song_id", 7]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (1.3ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 5], ["song_id", 8]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.4ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 6], ["song_id", 5]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (6.7ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 6], ["song_id", 5]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.5ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 6], ["song_id", 5]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.7ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 6], ["song_id", 5]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.6ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 7], ["song_id", 6]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.5ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 7], ["song_id", 8]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (1.8ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 7], ["song_id", 6]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (5.3ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 7], ["song_id", 8]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (0.6ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 8], ["song_id", 8]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (1.2ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 8], ["song_id", 7]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (4.7ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 8], ["song_id", 6]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMixtape::HABTM_Songs Create (1.2ms)[0m  [1m[32mINSERT INTO "mixtapes_songs" ("mixtape_id", "song_id") VALUES (?, ?)[0m  [["mixtape_id", 8], ["song_id", 5]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m

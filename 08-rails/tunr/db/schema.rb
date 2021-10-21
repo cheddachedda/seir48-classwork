@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_21_000915) do
+ActiveRecord::Schema.define(version: 2021_10_21_000939) do
 
   create_table "albums", force: :cascade do |t|
     t.text "title"
@@ -32,11 +32,21 @@ ActiveRecord::Schema.define(version: 2021_10_21_000915) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "genres_songs", id: false, force: :cascade do |t|
+    t.integer "genre_id"
+    t.integer "song_id"
+  end
+
   create_table "mixtapes", force: :cascade do |t|
     t.text "title"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "mixtapes_songs", id: false, force: :cascade do |t|
+    t.integer "mixtape_id"
+    t.integer "song_id"
   end
 
   create_table "songs", force: :cascade do |t|
