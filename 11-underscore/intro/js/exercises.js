@@ -17,3 +17,56 @@ const sales = {
 _(sales).each(function (amount, month) {
   console.log(month, amount);
 })
+
+// .map() //////////////////////////////////////////////////////////////////////
+const byNineteen = function (n) {
+  return n * 19;
+}
+
+const multiples = _(nums).map( byNineteen );
+
+// .map() for objects //////////////////////////////////////////////////////////
+const salesInfo = _(sales).map(function (total, month) {
+  return `${ total } sales in ${ month }`;
+});
+
+console.log(salesInfo);
+
+// .reduce() ///////////////////////////////////////////////////////////////////
+const total = _(nums).reduce(function (runningTotal, n) {
+  console.log(`runningTotal: ${ runningTotal }, n: ${ n}, return: ${ runningTotal + n }`);
+  return runningTotal + n;
+});
+
+// const add = function (a, b) {
+//   return a + b;
+// };
+//
+// const total = _(nums).reduce(add);
+// console.log(total);
+
+// .reduce() also works with objects ///////////////////////////////////////////
+
+// .find() /////////////////////////////////////////////////////////////////////
+const divisibleByFive = function (n) {
+  return n % 5 === 0;
+};
+
+const fivey = _(nums).find(divisibleByFive);
+
+// .filter() ///////////////////////////////////////////////////////////////////
+const allMultiplesOfFive = _(nums).filter(divisibleByFive);
+
+// .reject() ///////////////////////////////////////////////////////////////////
+const notMultiplesOfFive = _(nums).reject(divisibleByFive);
+console.log(notMultiplesOfFive);
+
+// .pluck() ////////////////////////////////////////////////////////////////////
+const bros = [
+  {name: 'Groucho', instrument: 'guitar', disposition: 'surly'},
+  {name: 'Harpo', instrument: 'harpo', disposition: 'angelic'},
+  {name: 'Chico', instrument: 'piano', disposition: 'lecherous'},
+];
+
+const instruments = _(bros).pluck('instruments');
+console.log(instruments);
