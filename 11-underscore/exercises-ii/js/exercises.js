@@ -32,10 +32,11 @@ const pushWordToAllWords = function (word) {
 _(words).map(function (string) {
   _(splitString(string)).each(pushWordToAllWords);
 });
+const firstLetterLower = function (string) {
+  return string[0].toLowerCase();
+}
 // Groups each word by its initial letter, regardless of case
-const wordsByInitial = _(allWords).groupBy(function (word) {
-  return word[0].toLowerCase();
-});
+const wordsByInitial = _(allWords).groupBy(firstLetterLower);
 
 console.table(wordsByInitial);
 
