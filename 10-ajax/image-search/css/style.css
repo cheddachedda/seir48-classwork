@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+  background-color: #293141;
+  box-sizing: border-box;
+  color: #A3BBD3;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 1rem 2rem;
+}
+
+h1, h2, h3 {
+  color: #FFFFFF;
+}
+
+form {
+  display: flex;
+}
