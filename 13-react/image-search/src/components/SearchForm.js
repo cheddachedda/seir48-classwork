@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class SearchForm extends Component {
   constructor() {
@@ -18,11 +17,6 @@ class SearchForm extends Component {
 
   _handleSubmit(event) {
     event.preventDefault();
-
-    // deferreds: done => Promises: then
-    axios('http://numbersapi.com/random/trivia').then(function (result) {
-      console.log(result);
-    });
   }
 
   render() {
