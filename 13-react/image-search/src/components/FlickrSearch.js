@@ -48,7 +48,7 @@ class FlickrSearch extends Component {
       <div>
         <h1>Image Search</h1>
         <SearchForm onSubmit={ this.fetchImages } />
-        <Gallery />
+        <Gallery images={ this.state.images } />
       </div>
     );
   }
