@@ -1,0 +1,259 @@
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSecrets (20211108233142)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "secrets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211108233142"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-08 23:32:30.364133"], ["updated_at", "2021-11-08 23:32:30.364133"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-11-09 10:33:03 +1100
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.2ms | Allocations: 438)
+Completed 200 OK in 123ms (Views: 104.2ms | ActiveRecord: 0.0ms | Allocations: 2413)
+
+
+Started GET "/secret" for 127.0.0.1 at 2021-11-09 10:33:05 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/secret"):
+  
+Started GET "/secrets" for 127.0.0.1 at 2021-11-09 10:33:13 +1100
+Processing by SecretsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/index.html.erb within layouts/application
+  [1m[36mSecret Load (0.6ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.html.erb:14
+  Rendered secrets/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1044)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/danielnguyen/Projects/seir48-classwork/13-react/secrets-server/public/packs
+[Webpacker] Hash: d049e51f054d7bb7b7f4
+Version: webpack 4.46.0
+Time: 8614ms
+Built at: 09/11/2021 10:33:27 am
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b6fefe692fc684992dfd.js   88.2 KiB  application  [emitted] [immutable]  application
+js/application-b6fefe692fc684992dfd.js.map   96.9 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b6fefe692fc684992dfd.js js/application-b6fefe692fc684992dfd.js.map
+[./app/javascript/packs/application.js] 395 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 2 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 14117.5ms | Allocations: 22241)
+Completed 200 OK in 14128ms (Views: 14119.7ms | ActiveRecord: 0.6ms | Allocations: 23562)
+
+
+Started GET "/secrets/new" for 127.0.0.1 at 2021-11-09 10:33:34 +1100
+Processing by SecretsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/new.html.erb within layouts/application
+  Rendered secrets/_form.html.erb (Duration: 31.6ms | Allocations: 3904)
+  Rendered secrets/new.html.erb within layouts/application (Duration: 33.8ms | Allocations: 4246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 7750)
+Completed 200 OK in 63ms (Views: 48.1ms | ActiveRecord: 3.1ms | Allocations: 10778)
+
+
+Started POST "/secrets" for 127.0.0.1 at 2021-11-09 10:33:44 +1100
+Processing by SecretsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "secret"=>"[FILTERED]", "commit"=>"Create Secret"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+  [1m[36mSecret Create (8.4ms)[0m  [1m[32mINSERT INTO "secrets" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "A secret about a possum"], ["created_at", "2021-11-08 23:33:44.577394"], ["updated_at", "2021-11-08 23:33:44.577394"]]
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/secrets/1
+Completed 302 Found in 30ms (ActiveRecord: 11.9ms | Allocations: 2573)
+
+
+Started GET "/secrets/1" for 127.0.0.1 at 2021-11-09 10:33:44 +1100
+Processing by SecretsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSecret Load (0.2ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets" WHERE "secrets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secrets_controller.rb:62:in `set_secret'
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/show.html.erb within layouts/application
+  Rendered secrets/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3753)
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 5175)
+
+
+Started GET "/secrets" for 127.0.0.1 at 2021-11-09 10:33:52 +1100
+Processing by SecretsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/index.html.erb within layouts/application
+  [1m[36mSecret Load (0.1ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.html.erb:14
+  Rendered secrets/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 798)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4299)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 4669)
+
+
+Started GET "/secrets/new" for 127.0.0.1 at 2021-11-09 10:33:55 +1100
+Processing by SecretsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/new.html.erb within layouts/application
+  Rendered secrets/_form.html.erb (Duration: 1.6ms | Allocations: 497)
+  Rendered secrets/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 605)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4105)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 4473)
+
+
+Started POST "/secrets" for 127.0.0.1 at 2021-11-09 10:33:59 +1100
+Processing by SecretsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "secret"=>"[FILTERED]", "commit"=>"Create Secret"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+  [1m[36mSecret Create (0.6ms)[0m  [1m[32mINSERT INTO "secrets" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "Swimming pool secret"], ["created_at", "2021-11-08 23:33:59.913207"], ["updated_at", "2021-11-08 23:33:59.913207"]]
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/secrets/2
+Completed 302 Found in 15ms (ActiveRecord: 3.9ms | Allocations: 2355)
+
+
+Started GET "/secrets/2" for 127.0.0.1 at 2021-11-09 10:33:59 +1100
+Processing by SecretsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSecret Load (0.2ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets" WHERE "secrets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/secrets_controller.rb:62:in `set_secret'
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/show.html.erb within layouts/application
+  Rendered secrets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3604)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 4500)
+
+
+Started GET "/secrets" for 127.0.0.1 at 2021-11-09 10:34:03 +1100
+Processing by SecretsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/index.html.erb within layouts/application
+  [1m[36mSecret Load (0.2ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.html.erb:14
+  Rendered secrets/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4392)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms | Allocations: 4761)
+
+
+Started GET "/secrets/new" for 127.0.0.1 at 2021-11-09 10:34:30 +1100
+Processing by SecretsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/new.html.erb within layouts/application
+  Rendered secrets/_form.html.erb (Duration: 2.4ms | Allocations: 495)
+  Rendered secrets/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 603)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4103)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 4471)
+
+
+Started POST "/secrets" for 127.0.0.1 at 2021-11-09 10:34:35 +1100
+Processing by SecretsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "secret"=>"[FILTERED]", "commit"=>"Create Secret"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+  [1m[36mSecret Create (0.8ms)[0m  [1m[32mINSERT INTO "secrets" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "Shoplifiting secret"], ["created_at", "2021-11-08 23:34:35.184220"], ["updated_at", "2021-11-08 23:34:35.184220"]]
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/secrets_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/secrets/3
+Completed 302 Found in 15ms (ActiveRecord: 4.7ms | Allocations: 2357)
+
+
+Started GET "/secrets/3" for 127.0.0.1 at 2021-11-09 10:34:35 +1100
+Processing by SecretsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSecret Load (0.2ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets" WHERE "secrets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/secrets_controller.rb:62:in `set_secret'
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/show.html.erb within layouts/application
+  Rendered secrets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3605)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 4504)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2021-11-09 10:34:42 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (Duration: 4.6ms | Allocations: 1054)
+  Rendered /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 4.1ms | Allocations: 705)
+  Rendered /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 13.3ms | Allocations: 3006)
+  Rendered layout /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/layouts/application.html.erb (Duration: 14.6ms | Allocations: 3225)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 4268)
+
+
+Started GET "/secrets" for 127.0.0.1 at 2021-11-09 10:35:26 +1100
+Processing by SecretsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secrets/index.html.erb within layouts/application
+  [1m[36mSecret Load (0.7ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.html.erb:14
+  Rendered secrets/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 1432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 5187)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.7ms | Allocations: 6384)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 10:35:42 +1100
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[36mSecret Load (1.6ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 2.3ms | Allocations: 207)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.5ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.9ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 12.6ms | Allocations: 1792)
+Completed 200 OK in 25ms (Views: 15.0ms | ActiveRecord: 1.6ms | Allocations: 2570)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 10:38:15 +1100
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[36mSecret Load (0.1ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.5ms | Allocations: 139)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.4ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.4ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 5.8ms | Allocations: 1536)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 1871)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-09 10:49:07 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/danielnguyen/.rvm/gems/ruby-2.7.4/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.0ms | Allocations: 216)
+Completed 200 OK in 19ms (Views: 16.2ms | Allocations: 841)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 10:49:11 +1100
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  [1m[36mSecret Load (0.2ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.6ms | Allocations: 142)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.7ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.6ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 30.8ms | Allocations: 2282)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.6ms | Allocations: 2668)
+
+
