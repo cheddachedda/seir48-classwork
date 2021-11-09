@@ -18,6 +18,7 @@ class SecretForm extends Component {
   _handleSubmit(event) {
     event.preventDefault();
     this.props.onSubmit(this.state.content);
+    this.setState({ content: '' });
   }
 
   render() {
