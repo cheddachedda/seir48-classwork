@@ -257,3 +257,81 @@ Processing by SecretsController#index as JSON
 Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.6ms | Allocations: 2668)
 
 
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 14:46:53 +1100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[36mSecret Load (0.3ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.8ms | Allocations: 237)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.8ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.2ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 14.8ms | Allocations: 4426)
+Completed 200 OK in 26ms (Views: 16.6ms | ActiveRecord: 1.0ms | Allocations: 6332)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 15:01:41 +1100
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  [1m[36mSecret Load (0.3ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 3.4ms | Allocations: 200)
+  Rendered secrets/_secret.json.jbuilder (Duration: 1.3ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 1.5ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 106.7ms | Allocations: 2521)
+Completed 200 OK in 191ms (Views: 123.4ms | ActiveRecord: 1.0ms | Allocations: 3436)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 15:11:23 +1100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[36mSecret Load (0.2ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 1.6ms | Allocations: 237)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.3ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.7ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 24.7ms | Allocations: 4428)
+Completed 200 OK in 64ms (Views: 43.9ms | ActiveRecord: 1.1ms | Allocations: 6334)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 15:12:27 +1100
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[36mSecret Load (0.3ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 4.5ms | Allocations: 200)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.3ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.2ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 25.0ms | Allocations: 1787)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.3ms | Allocations: 2702)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 15:12:36 +1100
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[36mSecret Load (0.2ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.7ms | Allocations: 139)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.4ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 2.1ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 10.1ms | Allocations: 1547)
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 1892)
+
+
+Started GET "/secrets.json" for 127.0.0.1 at 2021-11-09 15:13:06 +1100
+Processing by SecretsController#index as JSON
+  Rendering secrets/index.json.jbuilder
+  [1m[36mSecret Load (0.1ms)[0m  [1m[34mSELECT "secrets".* FROM "secrets"[0m
+  ↳ app/views/secrets/index.json.jbuilder:1
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.3ms | Allocations: 139)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.5ms | Allocations: 129)
+  Rendered secrets/_secret.json.jbuilder (Duration: 0.3ms | Allocations: 129)
+  Rendered secrets/index.json.jbuilder (Duration: 88.9ms | Allocations: 1547)
+Completed 200 OK in 91ms (Views: 90.6ms | ActiveRecord: 0.1ms | Allocations: 1891)
+
+
