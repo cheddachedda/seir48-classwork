@@ -5,6 +5,7 @@ const alpha = require('alphavantage')({ key: 'qweqweqwe' });
 
 const server = express();
 server.set('view-engine', ejs);
+server.use(express.static('public')); // put the public folder "online"
 const PORT = 1337;
 
 const apiKey = '03e7e5e640msh2164bc2c017c788p1bf94bjsn5dd033d7d390';
