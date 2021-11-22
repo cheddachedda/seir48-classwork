@@ -25,7 +25,11 @@ server.get('/info', (req, res) => {
       'x-rapidapi-key': apiKey
     }
   }).then((response) => {
-    res.json(response.data);
+    console.log(response.data);
+    res.render('info.ejs', {
+      symbol: response.data['Global Quote']['01. symbol'],
+      price: response.data['Global Quote']['05. price']
+    });
   }).catch((err) => {
     console.error(err);
     res.json(err);
