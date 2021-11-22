@@ -17,7 +17,7 @@ server.get('/info', (req, res) => {
   axios.get('https://alpha-vantage.p.rapidapi.com/query', {
     params: {
       function: 'GLOBAL_QUOTE',
-      symbol: req.query.stockCode,
+      symbol: req.query.stockSymbol,
       datatype: 'json'
     },
     headers: {
