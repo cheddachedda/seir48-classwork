@@ -6,7 +6,7 @@
       <button @click="zoomIn"> + </button>
       <button @click="zoomOut"> - </button>
     </div>
-    <img v-bind:src="pic" v-bind:height="size" />
+    <img v-if="size > 0" v-bind:src="pic" v-bind:height="size" />
   </div>
 </template>
 
