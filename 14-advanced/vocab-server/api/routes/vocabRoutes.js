@@ -2,12 +2,12 @@ const vocabController = require('../controllers/vocabController');
 
 module.exports = (app) => {
   app
-    .routes('/words')
+    .route('/words')
     .get(vocabController.listAllWords)
     .post(vocabController.createAWord);
 
   app
-    .routes('/words/:wordID')
+    .route('/words/:wordId')
     .get(vocabController.readAWord)
     .put(vocabController.updateAWord)
     .delete(vocabController.deleteAWord);
