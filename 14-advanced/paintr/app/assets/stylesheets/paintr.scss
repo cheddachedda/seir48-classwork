@@ -1,0 +1,29 @@
+* {
+  transition: all 0.2s;
+}
+
+.swatch {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+
+.swatch.selected {
+  box-shadow: 0 0 10px limegreen;
+}
+
+.canvas {
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 0.5em;
+  width: 0.5em;
+}

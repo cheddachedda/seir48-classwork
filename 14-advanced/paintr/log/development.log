@@ -1,0 +1,558 @@
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:03:12 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.html.erb within layouts/application
+  Rendered pages/hamldemo.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 3242ms (Views: 3212.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:19:24 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (3.1ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:19:41 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:19:47 +1100
+Processing by PagesController#hamldemo as */*
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (1.9ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:19:55 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:22:10 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:24:24 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (13.9ms)
+Completed 200 OK in 194ms (Views: 193.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:24:25 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:24:26 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:25:24 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:30:22 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (10.4ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:31:26 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:34:07 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (8.0ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:35:30 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block):
+    21: %ul
+    22:   - %w( Groucho Harpo Chico Zeppo Gummo ).each do |brother|
+    23:     %li= brother
+    24:   - end
+  
+app/views/pages/hamldemo.haml:24
+app/controllers/pages_controller.rb:7:in `hamldemo'
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:36:58 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (5.5ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hamldemo" for 127.0.0.1 at 2021-11-26 10:40:35 +1100
+Processing by PagesController#hamldemo as HTML
+  Rendering pages/hamldemo.haml within layouts/application
+  Rendered pages/hamldemo.haml within layouts/application (5.1ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:40:54 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:43:01 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:43:10 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/danielnguyen/Projects/seir48-classwork/14-advanced/paintr/app/views/pages/home.haml:3: syntax error, unexpected ',', expecting '}'
+...cape((( text_field_tag{ :color, :autofocus => true}
+...                              ^
+/Users/danielnguyen/Projects/seir48-classwork/14-advanced/paintr/app/views/pages/home.haml:4: syntax error, unexpected `ensure', expecting ')'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                         ^~~~~~
+/Users/danielnguyen/Projects/seir48-classwork/14-advanced/paintr/app/views/pages/home.haml:4: syntax error, unexpected `end', expecting ')'
+...uffer.upper if @haml_buffer;end;
+...                            ^~~
+/Users/danielnguyen/Projects/seir48-classwork/14-advanced/paintr/app/views/pages/home.haml:7: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/pages/home.haml:3: syntax error, unexpected ',', expecting '}'
+app/views/pages/home.haml:4: syntax error, unexpected `ensure', expecting ')'
+app/views/pages/home.haml:4: syntax error, unexpected `end', expecting ')'
+app/views/pages/home.haml:7: syntax error, unexpected `end', expecting ')'
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:43:31 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.4ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:43:47 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:44:07 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.6ms)
+Completed 200 OK in 48ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:44:45 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (9.4ms)
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:45:26 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.9ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:45:29 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (13.1ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:45:32 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (15.1ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:46:03 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:46:08 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (6.1ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:48:08 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.3ms)
+Completed 200 OK in 135ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:48:31 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (8.2ms)
+Completed 200 OK in 85ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:48:38 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.2ms)
+Completed 200 OK in 125ms (Views: 122.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:48:53 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (6.2ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:51:23 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (6.1ms)
+Completed 200 OK in 96ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:51:39 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.4ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:51:56 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (8.8ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:52:05 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (3.5ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:53:02 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.3ms)
+Completed 200 OK in 391ms (Views: 389.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:53:29 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.5ms)
+Completed 200 OK in 279ms (Views: 273.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:53:55 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.2ms)
+Completed 200 OK in 705ms (Views: 688.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:54:22 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.8ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:54:43 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (11.3ms)
+Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:54:50 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.5ms)
+Completed 200 OK in 91ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:55:01 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (3.4ms)
+Completed 200 OK in 71ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:55:10 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:56:32 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (3.6ms)
+Completed 200 OK in 145ms (Views: 140.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:56:53 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:57:24 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.0ms)
+Completed 200 OK in 293ms (Views: 291.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 10:58:48 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (3.7ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:00:39 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:35:55 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (22.5ms)
+Completed 200 OK in 733ms (Views: 723.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:36:36 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:37:20 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (8.8ms)
+Completed 200 OK in 314ms (Views: 312.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:43:27 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (12.1ms)
+Completed 200 OK in 612ms (Views: 604.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:45:02 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.6ms)
+Completed 200 OK in 408ms (Views: 403.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:45:33 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (3.3ms)
+Completed 200 OK in 88ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:46:27 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.0ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:48:45 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.9ms)
+Completed 200 OK in 84ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:49:01 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.2ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:49:34 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (9.3ms)
+Completed 200 OK in 227ms (Views: 224.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:49:42 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (9.5ms)
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:49:55 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.1ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:50:02 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (10.8ms)
+Completed 200 OK in 232ms (Views: 226.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:50:10 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (14.8ms)
+Completed 200 OK in 97ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:50:20 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (6.8ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:51:19 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.9ms)
+Completed 200 OK in 186ms (Views: 184.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:53:32 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (7.7ms)
+Completed 200 OK in 422ms (Views: 417.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:54:00 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (4.7ms)
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:56:15 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (6.9ms)
+Completed 200 OK in 530ms (Views: 528.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:57:21 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (6.9ms)
+Completed 200 OK in 442ms (Views: 436.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:58:19 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (9.5ms)
+Completed 200 OK in 251ms (Views: 249.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:58:35 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (6.3ms)
+Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:58:52 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (15.4ms)
+Completed 200 OK in 96ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:59:14 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.7ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:59:31 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (10.2ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-26 11:59:57 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.haml within layouts/application
+  Rendered pages/home.haml within layouts/application (5.9ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
