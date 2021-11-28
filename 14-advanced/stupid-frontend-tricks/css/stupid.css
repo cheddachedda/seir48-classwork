@@ -1,0 +1,36 @@
+body {
+  background-color: #A9B0BD;
+  background-image: url(http://www.placekitten.com/2000/1000);
+  background-size: cover;
+  font-family: sans-serif;
+  min-height: 300vh;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 140%;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1em;
+}
+
+.kitty-css {
+  display: none;
+  background-image: url(http://www.placekitten.com/800/1000);
+  background-attachment: fixed;
+  min-height: 10em;
+}
+
+.kitty-js {
+  background-image: url(http://www.placekitten.com/800/1000);
+  background-size: cover;
+  min-height: 20em;
+}
+
+.bubble {
+  background-color: lightblue;
+  border: 1px solid darkblue;
+  border-radius: 100%;
+  opacity: 0.4;
+  position: absolute;
+}
