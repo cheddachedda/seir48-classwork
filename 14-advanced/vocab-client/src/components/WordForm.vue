@@ -6,16 +6,16 @@
 
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="ui germany flag"></i> German
+        <i class="ui united kingdom flag"></i> English
       </div>
-      <input placeholder="Enter German word..." v-model="word.german" />
+      <input placeholder="Enter English word..." v-model="word.english" />
     </div>
 
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="ui united kingdom flag"></i> English
+        <i class="ui germany flag"></i> German
       </div>
-      <input placeholder="Enter English word..." v-model="word.english" />
+      <input placeholder="Enter German word..." v-model="word.german" />
     </div>
 
     <button class="positive ui button">Submit</button>
@@ -43,7 +43,7 @@ export default {
       if (this.word.english === '' || this.word.german === '') {
         this.errorsPresent = true;
       } else {
-        console.log('TODO: save the updates to the server');
+        this.$emit('createOrUpdate', this.word);
       }
     }
   }
