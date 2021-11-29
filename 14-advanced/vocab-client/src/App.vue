@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div id="app">
 
     <div class="ui inverted segment navbar">
@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style>
 #app > div.navbar {
   margin-bottom: 1.5em;
 }
