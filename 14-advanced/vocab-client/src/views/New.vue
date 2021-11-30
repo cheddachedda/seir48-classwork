@@ -19,7 +19,7 @@ export default {
   methods: {
     async createOrUpdate(word) {
       await api.createWord(word);
-      alert('Word created!') // TODO: replace this with Vue Flash Message
+      this.flash('Word created!', 'success') // TODO: replace this with Vue Flash Message
       this.$router.push(`/words`);
     }
   }

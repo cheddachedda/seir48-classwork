@@ -22,6 +22,7 @@
     </div>
 
     <div class="ui text container">
+      <flash-message class="myFlash"></flash-message>
       <div class="ui one column grid">
         <div class="column">
 
@@ -36,7 +37,10 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  // components: {
+  //   'flash-message':
+  // }
 };
 </script>
 
