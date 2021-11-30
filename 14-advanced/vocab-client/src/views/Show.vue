@@ -4,16 +4,16 @@
 
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="germany flag"></i> German
+        <i class="united kingdom flag"></i> English
       </div>
-      <input readonly :value="word.german" />
+      <input readonly :value="word.english" />
     </div>
 
     <div class="ui labeled input fluid">
       <div class="ui label">
-        <i class="united kingdom flag"></i> English
+        <i class="germany flag"></i> German
       </div>
-      <input readonly :value="word.english" />
+      <input readonly :value="word.german" />
     </div>
 
     <div class="actions">
